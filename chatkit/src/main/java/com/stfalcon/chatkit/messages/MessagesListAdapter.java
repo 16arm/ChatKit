@@ -119,6 +119,10 @@ public class MessagesListAdapter<MESSAGE extends IMessage>
     public int getItemViewType(int position) {
         return holders.getViewType(items.get(position).item, senderId);
     }
+    
+    public Object getItem(int position) {
+        return items.get(position).item;
+    }
 
     @Override
     public void onLoadMore(int page, int total) {
